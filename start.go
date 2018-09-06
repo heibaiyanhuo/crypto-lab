@@ -6,19 +6,19 @@ import (
 	"os"
 )
 
-func vigenerEnc() {
+func vigenereEnc() {
 	key := os.Args[1]
 	filename := os.Args[2]
 	fmt.Println(vigenere.Encrypt(key, filename))
 }
 
-func vigenerDec() {
+func vigenereDec() {
 	key := os.Args[1]
 	filename := os.Args[2]
 	fmt.Println(vigenere.Decrypt(key, filename))
 }
 
 func main() {
-	//vigenerEnc()
-	vigenerDec()
+	//vigenereEnc()
+	vigenereDec()
 }
