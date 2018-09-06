@@ -12,6 +12,13 @@ func vigenerEnc() {
 	fmt.Println(vigenere.Encrypt(key, filename))
 }
 
+func vigenerDec() {
+	key := os.Args[1]
+	filename := os.Args[2]
+	fmt.Println(vigenere.Decrypt(key, filename))
+}
+
 func main() {
-	vigenerEnc()
+	//vigenerEnc()
+	vigenerDec()
 }
