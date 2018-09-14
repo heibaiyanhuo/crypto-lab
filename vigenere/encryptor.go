@@ -7,8 +7,9 @@ import (
 
 func encrypt(key string, plaintext []byte) string {
 	var b strings.Builder
+	var messageByte uint8
 	for i := 0; i < len(plaintext); i++ {
-		messageByte := plaintext[i]
+		messageByte = plaintext[i]
 		if 97 <= messageByte && messageByte < 123 {
 			messageByte -= 32
 		}
@@ -20,5 +21,5 @@ func encrypt(key string, plaintext []byte) string {
 }
 
 func Encrypt(key string, filename string) string {
-	return encrypt(key, utils.GetContentFromFile(filename))
+	return encrypt(strings.ToUpper(key), utils.GetContentFromFile(filename))
 }
